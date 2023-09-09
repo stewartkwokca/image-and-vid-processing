@@ -9,19 +9,14 @@ def downloadYT(link):
     except:
         print("An error has occurred")
 
-def clipNoAudio(vidPath, t1, t2, outPath, createOutputFile=True):
+def clip(vidPath, t1, t2, outPath, audio=True, createOutputFile=True):
     clip = VideoFileClip(vidPath)
     clip = clip.subclip(t1, t2)
+    if not audio:
+        clip = clip.set_audio(None)
     if createOutputFile:
         clip.write_videofile(outPath)
     return clip
 
-def clipWithAudio(vidPath, t1, t2, outPath, createOutputFile=True):
-    clip = clipNoAudio(vidPath, t1, t2, outPath, createOutputFile=False)
-    audioclip = AudioFileClip(vidPath).subclip(t1, t2)
-    clip = clip.set_audio(audioclip)
-    if createOutputFile:
-        clip.write_videofile(outPath)
-    return clip
-
-clipWithAudio("test.mp4", 913, 916, "short_test.mp4")
+#downloadYT("https://www.youtube.com/watch?v=z6X7demVALo&t=917s")
+clip("test.mp4", 913, 916, "clip_test.mp4", audio=False)
