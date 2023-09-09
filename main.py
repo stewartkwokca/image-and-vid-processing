@@ -1,3 +1,5 @@
+# Video Processing Functions
+
 from pytube import YouTube
 from moviepy.editor import *
 
@@ -19,4 +21,4 @@ def clip(vidPath, t1, t2, outPath, audio=True, createOutputFile=True):
     return clip
 
 #downloadYT("https://www.youtube.com/watch?v=z6X7demVALo&t=917s")
-clip("test.mp4", 913, 916, "clip_test.mp4", audio=False)
+#clip("test.mp4", 913, 916, "clip_test.mp4", audio=False)
