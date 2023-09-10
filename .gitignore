@@ -1,0 +1,8 @@
+# created by virtualenv automatically
+/clippedVids
+/downloadedYTvids
+/edit-audios
+/Lib
+/Scripts
+pyvenv.cfg
+/.idea
