@@ -41,5 +41,5 @@ def cutByTimestamp(audioFile, timeStampFile):
 
 #link = "https://www.youtube.com/watch?v=Z_BHv6RFVpY"
 #downloadYT(link)
-#clip("downloadedYTvids/test.mp4", 913, 916, "clippdVids/clip_test.mp4")
-#cutByTimestamp("downloadedYTvids/cold_edit_songs.mp4", 'timeStamps.txt')
+#clip("downloadedYTvids/test.mp4", 913, 916, "clippedVids/clip_test.mp4")
+#cutByTimestamp("downloadedYTvids/cold_edit_songs.mp4", 'sampleTimestamps.txt')
